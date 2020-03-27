@@ -6,11 +6,14 @@
     <title>Batman 2021</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./CSS/animate.css">
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header animated fadeInUp">
             <div class="logo">КиноПульс</div>
             <form action="" class="search">
                 <input type="search" class="search-input" placeholder="Фильмы, сериалы, актеры">
@@ -25,13 +28,13 @@
         </header>
 
         <main class="main">
-            <h1 class="title">Бэтмен</h1>
-            <smal class="title-en">The Batman</smal>
-            <div class="info">
+            <h1 class="title animated fadeInRight">Бэтмен</h1>
+            <smal class="title-en animated fadeInRight delay-1s">The Batman</smal>
+            <div class="info animated fadeInUp delay-2s">
                 <div class="movie-info">
                     <span class="tag">Фильм</span>
                     <span class="country">США, 2021 год</span>
-                    <a href="#" class="play">Смотреть трейлер</a>
+                    <a data-fancybox href="https://www.youtube.com/watch?v=9faSpvs44EA" class="play">Смотреть трейлер</a>
                 </div>
                 <a href="#" class="more">Подробнее</a>
             </div>
@@ -56,20 +59,20 @@
 
                 <div class="full-info">
                     <nav class="tabs">
-                        <a href="#" class="tabs-item tabs-item-active">Описание</a>
-                        <a href="#" class="tabs-item">Рецензии</a>
-                        <a href="#" class="tabs-item">Премьеры</a>
-                        <a href="#" class="tabs-item">Актеры</a>
-                        <a href="#" class="tabs-item">Награды</a>
-                        <a href="#" class="tabs-item">Факты</a>
-                        <a href="#" class="tabs-item">Сайты</a>
+                        <a href="#about" class="tabs-item tabs-item-active">Описание</a>
+                        <a href="#reviews" class="tabs-item">Рецензии</a>
+                        <a href="#premiers" class="tabs-item">Премьеры</a>
+                        <a href="#actors" class="tabs-item">Актеры</a>
+                        <a href="#rewards" class="tabs-item">Награды</a>
+                        <a href="#facts" class="tabs-item">Факты</a>
+                        <a href="#sites" class="tabs-item">Сайты</a>
                         <a href="#" class="tabs-item">
                             <img src="img\bookmark-icon.svg" alt="" class="bookmark-added">
                         </a>
                     </nav>
 
                     <div class="full-content">
-                        <div class="tabs-content">
+                        <div class="tabs-content visible" id="about">
                             <p class="text">
                                 Предстоящий американский супергеройский фильм,
                                  основанный на одноимённых комиксах издательства DC Comics.
@@ -108,6 +111,24 @@
                                  возможно, станет главным злодеем фильма.
                             </p>
                         </div>
+                        <div class="tabs-content" id="reviews">
+                            <div class="text">Тут скоро появяться рецензии</div>
+                        </div>
+                        <div class="tabs-content" id="premiers">
+                            <div class="text">Тут скоро появиться информация о дате премьеры</div>
+                        </div>
+                        <div class="tabs-content" id="actors">
+                            <div class="text">Тут скоро появиться информация об актерах</div>
+                        </div>
+                        <div class="tabs-content" id="rewards">
+                            <div class="text">Тут скоро появиться инфомрация о наградах, которые получили актеры</div>
+                        </div>
+                        <div class="tabs-content" id="facts">
+                            <div class="text">Тут скоро опубликуются факты, связанные с предстоящей премьерой</div>
+                        </div>
+                        <div class="tabs-content" id="sites">
+                            <div class="text">Тут скоро появяться ссылки на другие иточники</div>
+                        </div>
                         <div class="subscribe">
                             <h3 class="subscribe-title">Подпишитесь на обновления</h3>
                                 <form action="#" class="subscribe-form">
@@ -128,5 +149,11 @@
         </main>
 
     </div>
+    <!-- Библиотека jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <!-- fancybox -->
+    <script src="./JS/jquery.fancybox.min.js"></script>
+    <!-- скрипты -->
+    <script src="JS/main.js"></script>
 </body>
 </html>
